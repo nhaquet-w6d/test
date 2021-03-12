@@ -1,0 +1,10 @@
+ci:
+  - branch: main
+    tasks:
+        - name: build
+          variables:
+            TARGET: "linux"
+            MULTIPROCESSOR: "true"
+        - name: deploy
+          environment: prod
+          expose: true
